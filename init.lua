@@ -1,3 +1,6 @@
+require('autocmd')
+require('utils')
+
 -- Install packer
 require('packages')
 
