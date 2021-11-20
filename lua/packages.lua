@@ -45,7 +45,10 @@ require('packer').startup(function()
   use 'crispgm/nvim-go'
   -- Terminal stuff
   use 'akinsho/toggleterm.nvim'
-
+  -- Color
+  use 'norcalli/nvim-colorizer.lua'
   -- Easy motion`
   use 'ggandor/lightspeed.nvim'
 end)
+
+--Standalone Configs
