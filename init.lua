@@ -1,17 +1,15 @@
-require('autocmd')
-require('utils')
-
--- Install packer
-require('packages')
-
---Load Basic Defaults
+---- Install packer
+require('plugins')
+--
+----Load Basic Defaults
 require('basics')
-
---Load UI Changes
-require('ui')
-
---Load Keys
+--
+----Load Keys
 require('keybind')
+--
+----Load Configs
+--require('configs')
+----require('autocmd')
+--require('utils')
+--
 
---Load Configs
-require('configs')
