@@ -1,4 +1,4 @@
---Incremental live completion (note: this is now a default on master)
+--Incremental live completion
 vim.o.inccommand = 'nosplit'
 
 --Set highlight on search
@@ -6,12 +6,10 @@ vim.o.hlsearch = false
 
 --Make line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 --Do not save when switching buffers (note: this is now a default on master)
 vim.o.hidden = true
-
---Enable mouse mode
-vim.o.mouse = 'a'
 
 --Enable break indent
 vim.o.breakindent = true
@@ -25,7 +23,7 @@ vim.o.smartcase = true
 
 --Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = 'auto'
 
 vim.bo.autoindent = true
 vim.bo.smartindent = true
@@ -36,8 +34,8 @@ vim.o.expandtab = true
 
 vim.o.scrolloff = 10
 
---Autochange
-vim.o.autochdir = true
-
 vim.o.termguicolors = true
-require'colorizer'.setup()
+
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_hide_inactive_statusline = true
+vim.cmd[[colorscheme tokyonight]]
