@@ -65,7 +65,17 @@ return require("packer").startup({
       },
       config = Get_setup("cmp"),
     })
-
+    -- Autopairs
+    use({
+      "windwp/nvim-autopairs",
+      config = Get_setup("pair"),
+    })
+    use {
+      "windwp/nvim-ts-autotag",
+      config = function()
+        require("nvim-ts-autotag").setup({enable = true})
+      end
+    }
     if packer_bootstrap then
       require("packer").sync()
     end
