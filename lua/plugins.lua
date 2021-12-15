@@ -43,6 +43,7 @@ return require("packer").startup({
     use ({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
+      config = Get_setup("ts")
     })
     -- LSP
     use ("neovim/nvim-lspconfig")
@@ -76,6 +77,14 @@ return require("packer").startup({
         require("nvim-ts-autotag").setup({enable = true})
       end
     }
+    --Neorg
+    use({
+      "nvim-neorg/neorg",
+      requires = {
+        {"nvim-lua/plenary.nvim"},
+      },
+      config = Get_setup("neorg"),
+    })
     if packer_bootstrap then
       require("packer").sync()
     end
